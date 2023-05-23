@@ -717,12 +717,12 @@ This may take up to a minute.</source>
         <translation>セットアップ完了</translation>
     </message>
     <message>
-        <source>Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer.</source>
-        <translation>デバイスを comma connect (connect.comma.ai)でペアリングし、comma primeの特典を申請してください。</translation>
-    </message>
-    <message>
         <source>Pair device</source>
         <translation>デバイスをペアリング</translation>
+    </message>
+    <message>
+        <source>Pair your device at connect.comma.ai and claim your comma prime offer.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

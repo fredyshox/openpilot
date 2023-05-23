@@ -719,12 +719,12 @@ This may take up to a minute.</source>
         <translation>Einrichtung beenden</translation>
     </message>
     <message>
-        <source>Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer.</source>
-        <translation>Koppele dein Gerät mit Comma Connect (connect.comma.ai) und sichere dir dein Comma Prime Angebot.</translation>
-    </message>
-    <message>
         <source>Pair device</source>
         <translation>Gerät koppeln</translation>
+    </message>
+    <message>
+        <source>Pair your device at connect.comma.ai and claim your comma prime offer.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

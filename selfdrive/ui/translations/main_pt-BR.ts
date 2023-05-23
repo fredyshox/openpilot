@@ -722,12 +722,12 @@ Isso pode levar até um minuto.</translation>
         <translation>Concluir</translation>
     </message>
     <message>
-        <source>Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer.</source>
-        <translation>Pareie seu dispositivo com comma connect (connect.comma.ai) e reivindique sua oferta de comma prime.</translation>
-    </message>
-    <message>
         <source>Pair device</source>
         <translation>Parear dispositivo</translation>
+    </message>
+    <message>
+        <source>Pair your device at connect.comma.ai and claim your comma prime offer.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
