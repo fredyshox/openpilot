@@ -13,11 +13,13 @@ static QString shorten(const QString &str, int max_len) {
 }
 
 MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
-  stack = new QStackedWidget;
+  stack = new QStackedWidget(this);
 
   QWidget * main_widget = new QWidget;
   QVBoxLayout *main_layout = new QVBoxLayout(main_widget);
-  const int icon_size = 200;
+  main_layout->setContentsMargins(40, 40, 40, 40);
+
+  const int icon_size = 160;
 
   // Home
   QHBoxLayout *home_layout = new QHBoxLayout;
@@ -60,7 +62,7 @@ MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
     QVBoxLayout *current_layout = new QVBoxLayout(current_widget);
 
     QLabel *title = new QLabel(tr("Current Destination"));
-    title->setStyleSheet("font-size: 55px");
+    title->setStyleSheet("font-size: 50px");
     current_layout->addWidget(title);
 
     current_route = new ButtonControl("", tr("CLEAR"));
@@ -79,7 +81,7 @@ MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
 
   // Recents
   QLabel *recents_title = new QLabel(tr("Recent Destinations"));
-  recents_title->setStyleSheet("font-size: 55px");
+  recents_title->setStyleSheet("font-size: 50px");
   main_layout->addWidget(recents_title);
   main_layout->addSpacing(20);
 
@@ -92,34 +94,31 @@ MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
   QWidget * no_prime_widget = new QWidget;
   {
     QVBoxLayout *no_prime_layout = new QVBoxLayout(no_prime_widget);
-    no_prime_layout->setContentsMargins(80, 90, 80, 60);
-    no_prime_layout->setSpacing(0);
+    no_prime_layout->setContentsMargins(64, 64, 64, 48);
+    no_prime_layout->setSpacing(38);
 
     QLabel *signup_header = new QLabel(tr("Upgrade Now"));
-    signup_header->setStyleSheet("font-size: 75px; color: #ffffff; font-weight: bold;");
-    no_prime_layout->addWidget(signup_header, 0, Qt::AlignTop);
-    no_prime_layout->addSpacing(50);
+    signup_header->setStyleSheet("font-size: 75px; font-weight: bold;");
+    no_prime_layout->addWidget(signup_header, 0);
 
     QLabel *description = new QLabel(tr("Become a comma prime member at connect.comma.ai"));
-    description->setStyleSheet("font-size: 60px; font-weight: light; color: white;");
+    description->setStyleSheet("font-size: 60px; font-weight: light;");
     description->setWordWrap(true);
-    no_prime_layout->addWidget(description, 0, Qt::AlignTop);
+    no_prime_layout->addWidget(description, 0);
 
     no_prime_layout->addStretch();
 
     QLabel *features = new QLabel(tr("PRIME FEATURES:"));
     features->setStyleSheet("font-size: 41px; font-weight: bold; color: #86FF4E;");
-    no_prime_layout->addWidget(features, 0, Qt::AlignBottom);
-    no_prime_layout->addSpacing(30);
+    no_prime_layout->addWidget(features, 0);
 
     QVector<QString> bullets = {tr("Remote access"), tr("1 year of storage"), tr("Turn-by-turn directions"), tr("Developer perks")};
     for (auto &b: bullets) {
-      // TODO: use stylesheet?
       const QString check = "<b><font color='#86FF4E'>✓</font></b> ";
       QLabel *l = new QLabel(check + b);
       l->setAlignment(Qt::AlignLeft);
-      l->setStyleSheet("font-size: 50px; margin-bottom: 15px;");
-      no_prime_layout->addWidget(l, 0, Qt::AlignBottom);
+      l->setStyleSheet("font-size: 50px;");
+      no_prime_layout->addWidget(l, 0);
     }
 
     no_prime_widget->setStyleSheet(R"(
@@ -137,10 +136,26 @@ MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
   });
 
   QVBoxLayout *wrapper = new QVBoxLayout(this);
+  wrapper->setContentsMargins(0, 0, 0, 0);
+  wrapper->setSpacing(0);
   wrapper->addWidget(stack);
 
 
   clear();
+
+  QLabel *no_recents = new QLabel(tr("no recent destinations"));
+  no_recents->setStyleSheet(R"(font-size: 50px; color: #9c9c9c)");
+  recent_layout->addWidget(no_recents);
+
+  setStyleSheet(R"(
+    background-color: #333333;
+    border-radius: 10px;
+  )");
+  stack->setStyleSheet(R"(
+    QPushButton {
+      background: none;
+    }
+  )");
 
   if (auto dongle_id = getDongleId()) {
     // Fetch favorite and recent locations
@@ -180,12 +195,12 @@ void MapPanel::showEvent(QShowEvent *event) {
 
 void MapPanel::clear() {
   home_button->setIcon(QPixmap("../assets/navigation/home_inactive.png"));
-  home_address->setStyleSheet(R"(font-size: 50px; color: grey;)");
+  home_address->setStyleSheet(R"(font-size: 36px; color: grey;)");
   home_address->setText(tr("No home\nlocation set"));
   home_button->disconnect();
 
   work_button->setIcon(QPixmap("../assets/navigation/work_inactive.png"));
-  work_address->setStyleSheet(R"(font-size: 50px; color: grey;)");
+  work_address->setStyleSheet(R"(font-size: 36px; color: grey;)");
   work_address->setText(tr("No work\nlocation set"));
   work_button->disconnect();
 
@@ -238,7 +253,7 @@ void MapPanel::refresh() {
 
       if (type == "favorite" && label == "home") {
         home_address->setText(name);
-        home_address->setStyleSheet(R"(font-size: 50px; color: white;)");
+        home_address->setStyleSheet(R"(font-size: 36px; color: white;)");
         home_button->setIcon(QPixmap("../assets/navigation/home.png"));
         QObject::connect(home_button, &QPushButton::clicked, [=]() {
           navigateTo(obj);
@@ -246,7 +261,7 @@ void MapPanel::refresh() {
         });
       } else if (type == "favorite" && label == "work") {
         work_address->setText(name);
-        work_address->setStyleSheet(R"(font-size: 50px; color: white;)");
+        work_address->setStyleSheet(R"(font-size: 36px; color: white;)");
         work_button->setIcon(QPixmap("../assets/navigation/work.png"));
         QObject::connect(work_button, &QPushButton::clicked, [=]() {
           navigateTo(obj);
@@ -269,13 +284,13 @@ void MapPanel::refresh() {
 
 
         QLabel *recent_label = new QLabel(shorten(name + " " + details, 45));
-        recent_label->setStyleSheet(R"(font-size: 50px;)");
+        recent_label->setStyleSheet(R"(font-size: 36px;)");
 
         layout->addWidget(recent_label);
         layout->addStretch();
 
         QLabel *arrow = new QLabel("→");
-        arrow->setStyleSheet(R"(font-size: 60px;)");
+        arrow->setStyleSheet(R"(font-size: 40px;)");
         layout->addWidget(arrow);
 
         widget->setStyleSheet(R"(
