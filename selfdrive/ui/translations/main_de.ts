@@ -472,33 +472,6 @@ location set</source>
     </message>
 </context>
 <context>
-    <name>PrimeAdWidget</name>
-    <message>
-        <source>Upgrade Now</source>
-        <translation>Jetzt abonieren</translation>
-    </message>
-    <message>
-        <source>Become a comma prime member at connect.comma.ai</source>
-        <translation>Werde Comma Prime Mitglied auf connect.comma.ai</translation>
-    </message>
-    <message>
-        <source>PRIME FEATURES:</source>
-        <translation>PRIME FUNKTIONEN:</translation>
-    </message>
-    <message>
-        <source>Remote access</source>
-        <translation>Fernzugriff</translation>
-    </message>
-    <message>
-        <source>1 year of storage</source>
-        <translation>1 Jahr Speicherplatz</translation>
-    </message>
-    <message>
-        <source>Developer perks</source>
-        <translation>Entwickler Vorteile</translation>
-    </message>
-</context>
-<context>
     <name>PrimeUserWidget</name>
     <message>
         <source>✓ SUBSCRIBED</source>

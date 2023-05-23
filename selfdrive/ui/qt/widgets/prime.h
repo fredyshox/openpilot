@@ -52,14 +52,6 @@ private:
   QVBoxLayout* mainLayout;
 };
 
-
-// widget for paired users without prime
-class PrimeAdWidget : public QFrame {
-  Q_OBJECT
-public:
-  explicit PrimeAdWidget(QWidget* parent = 0);
-};
-
 // container widget
 class SetupWidget : public QFrame {
   Q_OBJECT
@@ -70,7 +62,6 @@ public:
 private:
   PairingPopup *popup;
   QStackedWidget *mainLayout;
-  PrimeAdWidget *primeAd;
   PrimeUserWidget *primeUser;
 
 private slots:

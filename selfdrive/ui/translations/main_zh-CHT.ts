@@ -473,33 +473,6 @@ location set</source>
     </message>
 </context>
 <context>
-    <name>PrimeAdWidget</name>
-    <message>
-        <source>Upgrade Now</source>
-        <translation>馬上升級</translation>
-    </message>
-    <message>
-        <source>Become a comma prime member at connect.comma.ai</source>
-        <translation>成為 connect.comma.ai 的高級會員</translation>
-    </message>
-    <message>
-        <source>PRIME FEATURES:</source>
-        <translation>高級會員特點：</translation>
-    </message>
-    <message>
-        <source>Remote access</source>
-        <translation>遠程訪問</translation>
-    </message>
-    <message>
-        <source>1 year of storage</source>
-        <translation>一年的雲端行車記錄</translation>
-    </message>
-    <message>
-        <source>Developer perks</source>
-        <translation>開發者福利</translation>
-    </message>
-</context>
-<context>
     <name>PrimeUserWidget</name>
     <message>
         <source>✓ SUBSCRIBED</source>

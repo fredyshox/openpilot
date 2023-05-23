@@ -474,33 +474,6 @@ trabalho definido</translation>
     </message>
 </context>
 <context>
-    <name>PrimeAdWidget</name>
-    <message>
-        <source>Upgrade Now</source>
-        <translation>Atualizar Agora</translation>
-    </message>
-    <message>
-        <source>Become a comma prime member at connect.comma.ai</source>
-        <translation>Seja um membro comma prime em connect.comma.ai</translation>
-    </message>
-    <message>
-        <source>PRIME FEATURES:</source>
-        <translation>BENEFÍCIOS PRIME:</translation>
-    </message>
-    <message>
-        <source>Remote access</source>
-        <translation>Acesso remoto</translation>
-    </message>
-    <message>
-        <source>1 year of storage</source>
-        <translation>1 ano na nuvem</translation>
-    </message>
-    <message>
-        <source>Developer perks</source>
-        <translation>Benefícios para devs</translation>
-    </message>
-</context>
-<context>
     <name>PrimeUserWidget</name>
     <message>
         <source>✓ SUBSCRIBED</source>

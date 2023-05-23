@@ -473,33 +473,6 @@ location set</source>
     </message>
 </context>
 <context>
-    <name>PrimeAdWidget</name>
-    <message>
-        <source>Upgrade Now</source>
-        <translation>今すぐｱｯﾌﾟｸﾞﾚｰﾄ</translation>
-    </message>
-    <message>
-        <source>Become a comma prime member at connect.comma.ai</source>
-        <translation>connect.comma.ai でﾌﾟﾗｲﾑ会員に登録できます</translation>
-    </message>
-    <message>
-        <source>PRIME FEATURES:</source>
-        <translation>特典：</translation>
-    </message>
-    <message>
-        <source>Remote access</source>
-        <translation>リモートアクセス</translation>
-    </message>
-    <message>
-        <source>1 year of storage</source>
-        <translation>一年間の保存期間</translation>
-    </message>
-    <message>
-        <source>Developer perks</source>
-        <translation>開発者向け特典</translation>
-    </message>
-</context>
-<context>
     <name>PrimeUserWidget</name>
     <message>
         <source>✓ SUBSCRIBED</source>
