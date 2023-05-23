@@ -342,16 +342,6 @@
         <translation>최근 목적지</translation>
     </message>
     <message>
-        <source>Try the Navigation Beta</source>
-        <translation>네비게이션(베타)를 사용해보세요</translation>
-    </message>
-    <message>
-        <source>Get turn-by-turn directions displayed and more with a comma
-prime subscription. Sign up now: https://connect.comma.ai</source>
-        <translation>자세한 경로안내를 원하시면 comma prime을 구독하세요.
-등록：https://connect.comma.ai</translation>
-    </message>
-    <message>
         <source>No home
 location set</source>
         <translation>집
@@ -366,6 +356,34 @@ location set</source>
     <message>
         <source>no recent destinations</source>
         <translation>최근 목적지 없음</translation>
+    </message>
+    <message>
+        <source>Upgrade Now</source>
+        <translation type="unfinished">지금 업그레이드</translation>
+    </message>
+    <message>
+        <source>Become a comma prime member at connect.comma.ai</source>
+        <translation type="unfinished">connect.comma.ai 접속 comma prime 가입</translation>
+    </message>
+    <message>
+        <source>PRIME FEATURES:</source>
+        <translation type="unfinished">PRIME 기능：</translation>
+    </message>
+    <message>
+        <source>Remote access</source>
+        <translation type="unfinished">원격 접속</translation>
+    </message>
+    <message>
+        <source>1 year of storage</source>
+        <translation type="unfinished">1년간 저장</translation>
+    </message>
+    <message>
+        <source>Turn-by-turn directions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Developer perks</source>
+        <translation type="unfinished">개발자 혜택</translation>
     </message>
 </context>
 <context>

@@ -343,16 +343,6 @@
         <translation>Destinos Recentes</translation>
     </message>
     <message>
-        <source>Try the Navigation Beta</source>
-        <translation>Experimente a Navegação Beta</translation>
-    </message>
-    <message>
-        <source>Get turn-by-turn directions displayed and more with a comma
-prime subscription. Sign up now: https://connect.comma.ai</source>
-        <translation>Obtenha instruções passo a passo exibidas e muito mais com
-uma assinatura prime. Inscreva-se agora:  https://connect.comma.ai</translation>
-    </message>
-    <message>
         <source>No home
 location set</source>
         <translation>Sem local
@@ -367,6 +357,34 @@ trabalho definido</translation>
     <message>
         <source>no recent destinations</source>
         <translation>sem destinos recentes</translation>
+    </message>
+    <message>
+        <source>Upgrade Now</source>
+        <translation type="unfinished">Atualizar Agora</translation>
+    </message>
+    <message>
+        <source>Become a comma prime member at connect.comma.ai</source>
+        <translation type="unfinished">Seja um membro comma prime em connect.comma.ai</translation>
+    </message>
+    <message>
+        <source>PRIME FEATURES:</source>
+        <translation type="unfinished">BENEFÍCIOS PRIME:</translation>
+    </message>
+    <message>
+        <source>Remote access</source>
+        <translation type="unfinished">Acesso remoto</translation>
+    </message>
+    <message>
+        <source>1 year of storage</source>
+        <translation type="unfinished">1 ano na nuvem</translation>
+    </message>
+    <message>
+        <source>Turn-by-turn directions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Developer perks</source>
+        <translation type="unfinished">Benefícios para devs</translation>
     </message>
 </context>
 <context>

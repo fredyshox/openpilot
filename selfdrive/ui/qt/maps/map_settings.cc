@@ -92,25 +92,42 @@ MapPanel::MapPanel(QWidget* parent) : QWidget(parent) {
   QWidget * no_prime_widget = new QWidget;
   {
     QVBoxLayout *no_prime_layout = new QVBoxLayout(no_prime_widget);
-    QLabel *signup_header = new QLabel(tr("Try the Navigation Beta"));
-    signup_header->setStyleSheet(R"(font-size: 75px; color: white; font-weight:600;)");
-    signup_header->setAlignment(Qt::AlignCenter);
+    no_prime_layout->setContentsMargins(80, 90, 80, 60);
+    no_prime_layout->setSpacing(0);
 
-    no_prime_layout->addWidget(signup_header);
+    QLabel *signup_header = new QLabel(tr("Upgrade Now"));
+    signup_header->setStyleSheet("font-size: 75px; color: #ffffff; font-weight: bold;");
+    no_prime_layout->addWidget(signup_header, 0, Qt::AlignTop);
     no_prime_layout->addSpacing(50);
 
-    QLabel *screenshot = new QLabel;
-    QPixmap pm = QPixmap("../assets/navigation/screenshot.png");
-    screenshot->setPixmap(pm.scaledToWidth(1080, Qt::SmoothTransformation));
-    no_prime_layout->addWidget(screenshot, 0, Qt::AlignHCenter);
+    QLabel *description = new QLabel(tr("Become a comma prime member at connect.comma.ai"));
+    description->setStyleSheet("font-size: 60px; font-weight: light; color: white;");
+    description->setWordWrap(true);
+    no_prime_layout->addWidget(description, 0, Qt::AlignTop);
 
-    QLabel *signup = new QLabel(tr("Get turn-by-turn directions displayed and more with a comma\nprime subscription. Sign up now: https://connect.comma.ai"));
-    signup->setStyleSheet(R"(font-size: 45px; color: white; font-weight:300;)");
-    signup->setAlignment(Qt::AlignCenter);
-
-    no_prime_layout->addSpacing(20);
-    no_prime_layout->addWidget(signup);
     no_prime_layout->addStretch();
+
+    QLabel *features = new QLabel(tr("PRIME FEATURES:"));
+    features->setStyleSheet("font-size: 41px; font-weight: bold; color: #86FF4E;");
+    no_prime_layout->addWidget(features, 0, Qt::AlignBottom);
+    no_prime_layout->addSpacing(30);
+
+    QVector<QString> bullets = {tr("Remote access"), tr("1 year of storage"), tr("Turn-by-turn directions"), tr("Developer perks")};
+    for (auto &b: bullets) {
+      // TODO: use stylesheet?
+      const QString check = "<b><font color='#86FF4E'>✓</font></b> ";
+      QLabel *l = new QLabel(check + b);
+      l->setAlignment(Qt::AlignLeft);
+      l->setStyleSheet("font-size: 50px; margin-bottom: 15px;");
+      no_prime_layout->addWidget(l, 0, Qt::AlignBottom);
+    }
+
+    no_prime_widget->setStyleSheet(R"(
+      QWidget {
+        background-color: #333333;
+        border-radius: 10px;
+      }
+    )");
   }
 
   stack->addWidget(main_widget);

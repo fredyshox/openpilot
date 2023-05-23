@@ -343,16 +343,6 @@
         <translation>Letzte Ziele</translation>
     </message>
     <message>
-        <source>Try the Navigation Beta</source>
-        <translation>Beta Navigation ausprobieren</translation>
-    </message>
-    <message>
-        <source>Get turn-by-turn directions displayed and more with a comma
-prime subscription. Sign up now: https://connect.comma.ai</source>
-        <translation>Erhalte echtzeit Wegführung und mehr mit dem comma prime
-Abonnement. Melde dich jetzt an: https://connect.comma.ai</translation>
-    </message>
-    <message>
         <source>No home
 location set</source>
         <translation>Keine Heimadresse gesetzt</translation>
@@ -365,6 +355,34 @@ location set</source>
     <message>
         <source>no recent destinations</source>
         <translation>Keine kürzlich gewählten Ziele</translation>
+    </message>
+    <message>
+        <source>Upgrade Now</source>
+        <translation type="unfinished">Jetzt abonieren</translation>
+    </message>
+    <message>
+        <source>Become a comma prime member at connect.comma.ai</source>
+        <translation type="unfinished">Werde Comma Prime Mitglied auf connect.comma.ai</translation>
+    </message>
+    <message>
+        <source>PRIME FEATURES:</source>
+        <translation type="unfinished">PRIME FUNKTIONEN:</translation>
+    </message>
+    <message>
+        <source>Remote access</source>
+        <translation type="unfinished">Fernzugriff</translation>
+    </message>
+    <message>
+        <source>1 year of storage</source>
+        <translation type="unfinished">1 Jahr Speicherplatz</translation>
+    </message>
+    <message>
+        <source>Turn-by-turn directions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Developer perks</source>
+        <translation type="unfinished">Entwickler Vorteile</translation>
     </message>
 </context>
 <context>

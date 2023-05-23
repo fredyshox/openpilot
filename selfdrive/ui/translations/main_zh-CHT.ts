@@ -342,16 +342,6 @@
         <translation>最近目的地</translation>
     </message>
     <message>
-        <source>Try the Navigation Beta</source>
-        <translation>試用導航功能</translation>
-    </message>
-    <message>
-        <source>Get turn-by-turn directions displayed and more with a comma
-prime subscription. Sign up now: https://connect.comma.ai</source>
-        <translation>成為 comma 高級會員來使用導航功能
-立即註冊：https://connect.comma.ai</translation>
-    </message>
-    <message>
         <source>No home
 location set</source>
         <translation>未設定
@@ -366,6 +356,34 @@ location set</source>
     <message>
         <source>no recent destinations</source>
         <translation>沒有最近的導航記錄</translation>
+    </message>
+    <message>
+        <source>Upgrade Now</source>
+        <translation type="unfinished">馬上升級</translation>
+    </message>
+    <message>
+        <source>Become a comma prime member at connect.comma.ai</source>
+        <translation type="unfinished">成為 connect.comma.ai 的高級會員</translation>
+    </message>
+    <message>
+        <source>PRIME FEATURES:</source>
+        <translation type="unfinished">高級會員特點：</translation>
+    </message>
+    <message>
+        <source>Remote access</source>
+        <translation type="unfinished">遠程訪問</translation>
+    </message>
+    <message>
+        <source>1 year of storage</source>
+        <translation type="unfinished">一年的雲端行車記錄</translation>
+    </message>
+    <message>
+        <source>Turn-by-turn directions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Developer perks</source>
+        <translation type="unfinished">開發者福利</translation>
     </message>
 </context>
 <context>

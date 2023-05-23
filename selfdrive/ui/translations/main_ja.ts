@@ -342,16 +342,6 @@
         <translation>最近の目的地</translation>
     </message>
     <message>
-        <source>Try the Navigation Beta</source>
-        <translation>β版ﾅﾋﾞｹﾞｰｼｮﾝを試す</translation>
-    </message>
-    <message>
-        <source>Get turn-by-turn directions displayed and more with a comma
-prime subscription. Sign up now: https://connect.comma.ai</source>
-        <translation>より詳細な案内情報を得ることができます。
-詳しくはこちら：https://connect.comma.ai</translation>
-    </message>
-    <message>
         <source>No home
 location set</source>
         <translation>自宅の住所はまだ
@@ -366,6 +356,34 @@ location set</source>
     <message>
         <source>no recent destinations</source>
         <translation>最近の目的地履歴がありません</translation>
+    </message>
+    <message>
+        <source>Upgrade Now</source>
+        <translation type="unfinished">今すぐｱｯﾌﾟｸﾞﾚｰﾄ</translation>
+    </message>
+    <message>
+        <source>Become a comma prime member at connect.comma.ai</source>
+        <translation type="unfinished">connect.comma.ai でﾌﾟﾗｲﾑ会員に登録できます</translation>
+    </message>
+    <message>
+        <source>PRIME FEATURES:</source>
+        <translation type="unfinished">特典：</translation>
+    </message>
+    <message>
+        <source>Remote access</source>
+        <translation type="unfinished">リモートアクセス</translation>
+    </message>
+    <message>
+        <source>1 year of storage</source>
+        <translation type="unfinished">一年間の保存期間</translation>
+    </message>
+    <message>
+        <source>Turn-by-turn directions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Developer perks</source>
+        <translation type="unfinished">開発者向け特典</translation>
     </message>
 </context>
 <context>
