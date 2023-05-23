@@ -715,12 +715,12 @@ This may take up to a minute.</source>
         <translation>完成设置</translation>
     </message>
     <message>
-        <source>Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer.</source>
-        <translation>将您的设备与comma connect （connect.comma.ai）配对并领取您的comma prime优惠。</translation>
-    </message>
-    <message>
         <source>Pair device</source>
         <translation>配对设备</translation>
+    </message>
+    <message>
+        <source>Pair your device at connect.comma.ai and claim your comma prime offer.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -718,12 +718,12 @@ This may take up to a minute.</source>
         <translation>설정 완료</translation>
     </message>
     <message>
-        <source>Pair your device with comma connect (connect.comma.ai) and claim your comma prime offer.</source>
-        <translation>장치를 (connect.comma.ai)에서 페어링하고 comma prime 오퍼를 청구합니다.</translation>
-    </message>
-    <message>
         <source>Pair device</source>
         <translation>장치 페어링</translation>
+    </message>
+    <message>
+        <source>Pair your device at connect.comma.ai and claim your comma prime offer.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
