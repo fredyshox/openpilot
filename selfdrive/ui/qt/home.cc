@@ -131,25 +131,26 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
   center_layout = new QStackedLayout();
 
   QWidget *home_widget = new QWidget(this);
-  QHBoxLayout *home_widget_layout = new QHBoxLayout(home_widget);
-  home_widget_layout->setContentsMargins(0, 0, 0, 0);
-  home_widget_layout->setSpacing(32);
   {
-    // Left: DriveStats
+    QHBoxLayout *home_widget_layout = new QHBoxLayout(home_widget);
+    home_widget_layout->setContentsMargins(0, 0, 0, 0);
+    home_widget_layout->setSpacing(32);
+
+    // left: DriveStats
     home_widget_layout->addWidget(new DriveStats, 1);
 
-    // Right: ExperimentalModeButton, SetupWidget
+    // right: ExperimentalModeButton, SetupWidget
     QWidget *right_column = new QWidget(this);
-    QVBoxLayout *right_column_layout = new QVBoxLayout(right_column);
-    right_column_layout->setContentsMargins(0, 0, 0, 0);
-    right_column_layout->setSpacing(32);
-    {
-      ExperimentalModeButton *experimental_mode = new ExperimentalModeButton(this);
-      QObject::connect(experimental_mode, &ExperimentalModeButton::openSettings, this, &OffroadHome::openSettings);
+    QVBoxLayout *layout = new QVBoxLayout(right_column);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(32);
 
-      right_column_layout->addWidget(experimental_mode, 1);
-      right_column_layout->addWidget(new SetupWidget, 1);
-    }
+    ExperimentalModeButton *experimental_btn = new ExperimentalModeButton(this);
+    QObject::connect(experimental_btn, &ExperimentalModeButton::openSettings, this, &OffroadHome::openSettings);
+    layout->addWidget(experimental_btn, 1);
+
+    layout->addWidget(new SetupWidget, 1);
+
     home_widget_layout->addWidget(right_column);
   }
   center_layout->addWidget(home_widget);

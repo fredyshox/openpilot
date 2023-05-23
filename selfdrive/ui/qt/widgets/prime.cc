@@ -233,9 +233,9 @@ SetupWidget::SetupWidget(QWidget* parent) : QFrame(parent) {
   finishRegistationLayout->setSpacing(38);
   finishRegistationLayout->setContentsMargins(64, 56, 64, 48);
 
-  QLabel* title = new QLabel(tr("Finish Setup"));
-  title->setStyleSheet("font-size: 75px; font-weight: bold;");
-  finishRegistationLayout->addWidget(title);
+  QLabel* registrationTitle = new QLabel(tr("Finish Setup"));
+  registrationTitle->setStyleSheet("font-size: 75px; font-weight: bold;");
+  finishRegistationLayout->addWidget(registrationTitle);
 
   QLabel* registrationDescription = new QLabel(tr("Pair your device at connect.comma.ai and claim your comma prime offer."));
   registrationDescription->setWordWrap(true);
