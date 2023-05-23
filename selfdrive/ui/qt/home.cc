@@ -130,27 +130,29 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
   main_layout->addSpacing(25);
   center_layout = new QStackedLayout();
 
-  // Vertical experimental button and drive stats layout
-  QWidget* statsAndExperimentalModeButtonWidget = new QWidget(this);
-  QVBoxLayout* statsAndExperimentalModeButton = new QVBoxLayout(statsAndExperimentalModeButtonWidget);
-  statsAndExperimentalModeButton->setSpacing(30);
-  statsAndExperimentalModeButton->setMargin(0);
+  QWidget *home_widget = new QWidget(this);
+  QHBoxLayout *home_widget_layout = new QHBoxLayout(home_widget);
+  home_widget_layout->setContentsMargins(0, 0, 0, 0);
+  home_widget_layout->setSpacing(32);
+  {
+    // Left: DriveStats
+    home_widget_layout->addWidget(new DriveStats, 1);
 
-  ExperimentalModeButton *experimental_mode = new ExperimentalModeButton(this);
-  QObject::connect(experimental_mode, &ExperimentalModeButton::openSettings, this, &OffroadHome::openSettings);
+    // Right: ExperimentalModeButton, SetupWidget
+    QWidget *right_column = new QWidget(this);
+    QVBoxLayout *right_column_layout = new QVBoxLayout(right_column);
+    right_column_layout->setContentsMargins(0, 0, 0, 0);
+    right_column_layout->setSpacing(32);
+    {
+      ExperimentalModeButton *experimental_mode = new ExperimentalModeButton(this);
+      QObject::connect(experimental_mode, &ExperimentalModeButton::openSettings, this, &OffroadHome::openSettings);
 
-  statsAndExperimentalModeButton->addWidget(experimental_mode, 1);
-  statsAndExperimentalModeButton->addWidget(new DriveStats, 1);
-
-  // Horizontal experimental + drive stats and setup widget
-  QWidget* statsAndSetupWidget = new QWidget(this);
-  QHBoxLayout* statsAndSetup = new QHBoxLayout(statsAndSetupWidget);
-  statsAndSetup->setMargin(0);
-  statsAndSetup->setSpacing(30);
-  statsAndSetup->addWidget(statsAndExperimentalModeButtonWidget, 1);
-  statsAndSetup->addWidget(new SetupWidget);
-
-  center_layout->addWidget(statsAndSetupWidget);
+      right_column_layout->addWidget(experimental_mode, 1);
+      right_column_layout->addWidget(new SetupWidget, 1);
+    }
+    home_widget_layout->addWidget(right_column);
+  }
+  center_layout->addWidget(home_widget);
 
   // add update & alerts widgets
   update_widget = new UpdateAlert();
@@ -168,7 +170,7 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
 
   setStyleSheet(R"(
     * {
-     color: white;
+      color: white;
     }
     OffroadHome {
       background-color: black;
