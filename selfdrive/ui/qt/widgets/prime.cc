@@ -198,6 +198,8 @@ SetupWidget::SetupWidget(QWidget* parent) : QFrame(parent) {
 
   if (uiState()->primeType()) {
     mainLayout->setCurrentWidget((QWidget*)primeUser);
+  } else {
+    mainLayout->setVisible(false);
   }
 
   setFixedWidth(750);
@@ -237,11 +239,15 @@ void SetupWidget::replyFinished(const QString &response, bool success) {
 
   if (!json["is_paired"].toBool()) {
     mainLayout->setCurrentIndex(0);
+    mainLayout->setVisible(true);
   } else {
     popup->reject();
 
     if (prime_type) {
       mainLayout->setCurrentWidget(primeUser);
+      mainLayout->setVisible(true);
+    } else {
+      mainLayout->setVisible(false);
     }
   }
 }
