@@ -180,6 +180,7 @@ void PrimeUserWidget::replyFinished(const QString &response) {
   points->setText(QString::number(json["points"].toInt()));
 }
 
+
 PrimeAdWidget::PrimeAdWidget(QWidget* parent) : QFrame(parent) {
   QVBoxLayout* main_layout = new QVBoxLayout(this);
   main_layout->setContentsMargins(64, 56, 64, 48);

@@ -2,6 +2,7 @@
 
 #include <QHBoxLayout>
 #include <QMouseEvent>
+#include <QStackedWidget>
 #include <QVBoxLayout>
 
 #include "selfdrive/ui/qt/maps/map_settings.h"
@@ -136,8 +137,21 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
     home_widget_layout->setContentsMargins(0, 0, 0, 0);
     home_widget_layout->setSpacing(32);
 
-    // left: MapPanel
-    home_widget_layout->addWidget(new MapPanel, 1);
+    // left: MapPanel, PrimeAdWidget
+    QStackedWidget *content_stack = new QStackedWidget();
+    content_stack->addWidget(new MapPanel);
+    content_stack->addWidget(new PrimeAdWidget);
+    content_stack->setStyleSheet(R"(
+      QStackedWidget {
+        background-color: #333333;
+        border-radius: 10px;
+      }
+      QPushButton {
+        background-color: none;
+        border: none;
+      }
+    )");
+    home_widget_layout->addWidget(content_stack, 1);
 
     // right: ExperimentalModeButton, SetupWidget
     QWidget *right_column = new QWidget(this);
