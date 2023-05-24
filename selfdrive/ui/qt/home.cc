@@ -151,6 +151,12 @@ OffroadHome::OffroadHome(QWidget* parent) : QFrame(parent) {
         border: none;
       }
     )");
+
+    content_stack->setCurrentIndex(uiState()->primeType() ? 0 : 1);
+    connect(uiState(), &UIState::primeTypeChanged, [=](int prime_type) {
+      content_stack->setCurrentIndex(prime_type ? 0 : 1);
+    });
+
     home_widget_layout->addWidget(content_stack, 1);
 
     // right: ExperimentalModeButton, SetupWidget
