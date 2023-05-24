@@ -65,14 +65,6 @@ jobs:
         fi
     - name: Install dependencies
       run: ./tools/mac_setup.sh
-    - name: Build openpilot
-      run: |
-        source tools/openpilot_env.sh
-        poetry run selfdrive/manager/build.py
-  
-        # cleanup scons cache
-        rm -rf /tmp/scons_cache/
-        poetry run scons -j$(nproc) --cache-populate
     - name: Start SSH server on failure
       timeout-minutes: 30
       uses: ./
