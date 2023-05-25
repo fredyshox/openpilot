@@ -63,11 +63,11 @@ jobs:
         else
           echo "Cache entries not found"
         fi
-    # - name: Install dependencies
-    #   run: ./tools/mac_setup.sh
+    - name: Install dependencies
+      run: ./tools/mac_setup.sh
     - name: Start SSH server on failure
       uses: mdelillo/ssh-server-action@main
-      timeout-minutes: 30
+      timeout-minutes: 300
       with:
         ngrok-authtoken: "${{ secrets.NGROK_AUTHTOKEN }}"
         ssh-public-key: "${{ secrets.SSH_PUBLIC_KEY }}"
